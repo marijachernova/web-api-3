@@ -31,22 +31,27 @@ Tasks API
 
 1. Установка зависимостей
    
-1.1 git clone <repository-url> # Клонирование репозитория
+  1.1 git clone <repository-url> # Клонирование репозитория
 
-1.2 cd "WebAPI3"
+  1.2 cd "WebAPI3"
 
-1.3 \venv\Scripts\activate.ps1  # Создание виртуального окружения (опционально) Windows
-1.4 pip install -r requirements.txt # Установка зависимостей
+    1.3 \venv\Scripts\activate.ps1  # Создание виртуального окружения (опционально) Windows
 
-3. Запуск NATS сервера 
+    1.4 pip install -r requirements.txt # Установка зависимостей
+
+2. Запуск NATS сервера
+   
 2.1 .\nats-server.exe -p 4222 -m 8222 # Запуск NATS
+
 2.2 nats sub -s nats://127.0.0.1:4222 items.updates # Подписка на канал
+
 2.3 .\nats pub -s nats://127.0.0.1:4222 items.updates "Hello from NATS" # Отправка тестового сообщения
+
 2.4 curl http://localhost:8222/  # Мониторинг NATS
 
-4. python -m uvicorn app.main # Запуск приложения
+3. python -m uvicorn app.main # Запуск приложения
 
-5.  ws://localhost:8000/ws/items # WebSocket через клиент на URL 
+4.  ws://localhost:8000/ws/items # WebSocket через клиент на URL 
 
 ---
 
