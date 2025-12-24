@@ -49,7 +49,7 @@ ws://localhost:8000/ws/items
 
 ---
 
-Основные URL
+## Основные URL
 
-Документация API: http://localhost:8000/docs
-Мониторинг NATS: http://localhost:8222
+1. Документация API: http://localhost:8000/docs
+2. Мониторинг NATS: http://localhost:8222
